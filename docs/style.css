@@ -1,0 +1,74 @@
+/* Body with phosphorescent girly gradient background */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #fbd3e9, #bb377d, #f7bb97);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    margin: 0;
+    padding: 0;
+}
+
+/* Animation for background color movement */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffb6c1;
+    transform: scale(1.05);
+}
+
+.friend-btn {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.friend-btn:hover {
+    background-color: #ffb6c1;
+    transform: scale(1.1);
+}
+
+/* Message container pop-up */
+#message-container {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    color: black;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#message-container.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#message-container.inactive {
+    opacity: 0;
+    transform: scale(0.9);
+}
